@@ -21,3 +21,32 @@ doc_list = [
 ]
 
 BCA elasticsearch IP address: 10.20.215.215:9200
+
+Task 2:
+
+- create a script to push extended access-list with your own name
+- the script must be robust, meaning:
+	- when access-list does not exist, it pushes the config, return success code
+	- when access-list does exist, it compares the config:
+		- if same, do not push, return existing code
+		- if different, throw some error
+
+
+Task 3:
+
+- use own name as db name
+- create a collection of devices in mongodb (2 routers)
+- create a list of command to push to devices, and save in file commands.txt (e.g. access list from task2)
+e.g:
+ip access-list extended TEST
+ permit ip host 10.0.0.1 any
+ deny any any
+
+- push configurations and save the status in db collection push_config
+e.g:
+{
+	"device_id": <device ObjectID>,
+	"timestamp": datetime.utcnow(),
+	"cmd_output": "blablabla"
+}
+
