@@ -1,0 +1,31 @@
+Elasticsearch:
+https://elasticsearch-py.readthedocs.io/en/master/
+pip install elasticsearch
+
+curl -XGET localhost:9200/_cat/indices
+curl -XGET localhost:9200/<index_name>/_search?pretty
+curl -XDELETE localhost:9200/<index_name>
+
+Python3:
+sudo yum install python3
+pip install paramiko
+dependencies: 
+ - http://www.paramiko.org/installing.html
+ - https://cryptography.io/en/latest/installation/:
+   sudo yum install redhat-rpm-config gcc libffi-devel python-devel openssl-devel
+
+https://pynet.twb-tech.com/blog/automation/netmiko.html
+
+
+Python virtual env:
+- make venv directory:
+  cd ~
+  mkdir <name>
+  cd <name>
+  mkdir my_env
+  python3 -m venv my_env
+- use venv
+  source ~/<name>/my_env/bin/activate
+  [admin@sandbox ~]$ source ~/fwiratam/my_env/bin/activate
+  (my_env) [admin@sandbox ~]$ 
+

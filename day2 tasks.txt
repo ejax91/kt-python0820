@@ -1,0 +1,23 @@
+Task 1:
+
+- create a script to parse interface utilization then insert to elasticsearch
+- create index with your own name
+- don't forget the timestamp
+- example parse output:
+
+doc_list = [
+	{
+		"interface_name": "Gig1",
+		"input_rate": 4000,
+		"output_rate": 5000,
+		"timestamp": datetime.utcnow()
+	},
+	{
+		"interface_name": "Gig2",
+		"input_rate": 3000,
+		"output_rate": 4000,
+		"timestamp": datetime.utcnow()
+	},
+]
+
+BCA elasticsearch IP address: 10.20.215.215:9200

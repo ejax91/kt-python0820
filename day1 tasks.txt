@@ -1,0 +1,35 @@
+task 1:
+
+- script to save configuration (show run)
+- bonus: save config to file, filename using hostname
+
+task 2:
+
+- script to parse config and save as dictionary (interface only)
+- use split() to split strings
+- example output:
+
+my_router = {
+	"interfaces": [
+		{"Gig1": {"name": "Gig1", "ip_addr": "1.2.3.4", "netmask": "255.255.255.0", "status": "up"}},
+		{"Gig2": {"name": "Gig2", "ip_addr": "4.5.6.7", "netmask": "255.255.255.0", "status": "down"}},
+	]
+}
+
+task 3:
+
+- improve task 2 script to use regex for matching patterns
+- https://www.programiz.com/python-programming/regex
+- example:
+
+import re
+
+line = 'ip address 1.2.3.4 255.255.255.0'
+regex_pattern = r'ip address (\d+\.\d+\.\d+\.\d+) (\d+\.\d+\.\d+\.\d+)'
+
+line_match = re.match(regex_pattern, line)
+if line_match:
+	ip_addr = line_match.group(1)
+	netmask = line_match.group(2)
+
+- link for testing regex: https://regexr.com/
