@@ -3,8 +3,8 @@ import time
 import re
 
 hostname = '10.1.1.101'
-my_username = 'bca'
-my_password = 'Janganmasuk321'
+my_username = 'username_anda'
+my_password = 'password_anda'
 port = 22
 
 client = paramiko.SSHClient()
