@@ -1,0 +1,5 @@
+Value ip_addr (\d+\.\d+\.\d+\.\d+)
+Value mac_addr (\S+)
+
+Start
+  ^Internet\s+${ip_addr}\s+\d+\s+${mac_addr}.* -> Record

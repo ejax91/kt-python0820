@@ -10,12 +10,14 @@ device["crypto_map"]: [
 		"seq": 10,
 		"name": "TEST",
 		"peer": "1.2.3.4",
-		"key": "TEST"
+		"match": ["10.0.0.0/24"]
+		"transform-set": "proposal4"
 	},
 	{
 		"seq": 20,
 		"name": "TEST2",
-		"peer": "4.5.6.7",
-		"key": "TEST"
+		"peer": "172.17.2.5",
+		"match": ["192.168.1.0/24"]
+		"transform-set": "proposal4"
 	}
 ]
