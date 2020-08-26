@@ -1,0 +1,21 @@
+Task 1:
+
+- create a script to parse crypto map configuration
+- get the config first from devices
+- use textfsm to parse the confg
+
+example output:
+device["crypto_map"]: [
+	{
+		"seq": 10,
+		"name": "TEST",
+		"peer": "1.2.3.4",
+		"key": "TEST"
+	},
+	{
+		"seq": 20,
+		"name": "TEST2",
+		"peer": "4.5.6.7",
+		"key": "TEST"
+	}
+]
